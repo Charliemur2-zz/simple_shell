@@ -10,19 +10,19 @@
 # simple_shell - a simple UNIX command interpreter.
 
 > Project made at [Holberton School](https://www.holbertonschool.com "Holberton School.") for educational purpose.
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+> Version: 0.0
+![Carlos Murcia](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fcharliesoka)![Luis Miguel Vargas](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fluismvargasg1)![GitHub contributors](https://img.shields.io/github/contributors/luismvargasg/simple_shell)![GitHub last commit](https://img.shields.io/github/last-commit/luismvargasg/simple_shell)![GitHub repo size](https://img.shields.io/github/repo-size/luismvargasg/simple_shell)
 
 ## Table of Contents
 
 - [Description](#description)
-- [Current Features](#current)
-- [Respository Files Description](#repository)
-- [Flow Chart](#flow)
-- [Usage Examples](#usage)
-- [Getting Started](#getting)
+- [Current Features](#current-features)
+- [Respository Files Description](#repository-files-description)
+- [Flow Chart](#flow-chart)
+- [Usage Examples](#usage-examples)
+- [Getting Started](#getting-started)
 - [Prerequisits](#prerequisits)
-- [Built With - Compilation](#built)
+- [Built With - Compilation](#built-with---compilation)
 - [Authors](#authors)
 - [License](#license)
 - [Acknowledgments](#Acknowledgments)
@@ -81,9 +81,7 @@ This program was made and tested using Ubuntu 14.04.3 LTS and compiled with gcc 
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+Opensource project.
 
 ## Acknowledgments
 
