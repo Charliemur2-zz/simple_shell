@@ -10,8 +10,10 @@
 # simple_shell - a simple UNIX command interpreter.
 
 > Project made at [Holberton School](https://www.holbertonschool.com "Holberton School.") for educational purpose.
+
 > Version: 0.0
-![Carlos Murcia](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fcharliesoka)![Luis Miguel Vargas](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fluismvargasg1)![GitHub contributors](https://img.shields.io/github/contributors/luismvargasg/simple_shell)![GitHub last commit](https://img.shields.io/github/last-commit/luismvargasg/simple_shell)![GitHub repo size](https://img.shields.io/github/repo-size/luismvargasg/simple_shell)
+
+[![Carlos Murcia](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fcharliesoka)] [![Luis Miguel Vargas](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fluismvargasg1)] [![GitHub contributors](https://img.shields.io/github/contributors/luismvargasg/simple_shell)] [![GitHub last commit](https://img.shields.io/github/last-commit/luismvargasg/simple_shell)] [![GitHub repo size](https://img.shields.io/github/repo-size/luismvargasg/simple_shell)]
 
 ## Table of Contents
 
