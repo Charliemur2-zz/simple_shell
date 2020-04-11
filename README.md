@@ -13,7 +13,7 @@
 
 > Version: 0.0
 
-[![Carlos Murcia](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fcharliesoka)] [![Luis Miguel Vargas](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fluismvargasg1)] [![GitHub contributors](https://img.shields.io/github/contributors/luismvargasg/simple_shell)] [![GitHub last commit](https://img.shields.io/github/last-commit/luismvargasg/simple_shell)] [![GitHub repo size](https://img.shields.io/github/repo-size/luismvargasg/simple_shell)]
+[![Carlos Murcia](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fcharliesoka)](https://twitter.com/charliesoka) [![Luis Miguel Vargas](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fluismvargasg1)](https://twitter.com/luismvargasg1) [![GitHub contributors](https://img.shields.io/github/contributors/luismvargasg/simple_shell)](https://github.com/contributors/luismvargasg/simple_shell) [![GitHub last commit](https://img.shields.io/github/last-commit/luismvargasg/simple_shell)](https://github/last-commit/luismvargasg/simple_shell) [![GitHub repo size](https://img.shields.io/github/repo-size/luismvargasg/simple_shell)](https:///github/repo-size/luismvargasg/simple_shell)
 
 ## Table of Contents
 
