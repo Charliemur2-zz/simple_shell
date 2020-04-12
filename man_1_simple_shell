@@ -1,0 +1,38 @@
+.\" SIMPLE SHELL.
+.\" Contact Charliemur2 or luismvargasg on GitHub to correct errors or typos.
+.TH man 1 "10 April 2020" "1.0" "SIMPLE SHELL"
+.SH NAME
+simple_shell \- run a basic shell
+.SH SYNOPSIS
+   .B #include <stdio.h>
+   .B #include <stdlib.h>
+   .B #include <sys/types.h>
+   .B #include <sys/wait.h>
+   .B #include <string.h>
+
+.B invocation: ./simple_shell
+    simple_shell$ [command] [argument1] [argument2...] [filename/path]
+    To exit type in the prompt: exit
+.SH DESCRIPTION
+simple_shell is the standard command interpreter for the system. It is a program that runs a basic shell. It run\
+s basic commands from the standar input and execute that in the standar output like the original shell. 
+Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+The prompt is displayed again each time a command has been executed.
+The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+It handles arguments with the commands.
+The simple_shell shows error messages when a typing error occurs.
+.SH OPTIONS
+The nuseradd does not take any options. However, you can supply username.
+.SH EXIT STATUS
+     Errors that are detected by the shell, such as a syntax error, will cause the shell to
+     exit with a non-zero exit status.  If the shell is not an interactive shell, the execu-
+     tion of the shell file will be aborted.  Otherwise the shell will return the exit status
+     of the last command executed, or if the exit builtin is used with a numeric argument, it
+     will return the argument.
+.SH SEE ALSO
+man (2) sh
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Luis Miguel Vargas (luismvargasg on GitHub).
+Carlos Andres Murcia Muñoz (Charliemur2 on GitHub).
