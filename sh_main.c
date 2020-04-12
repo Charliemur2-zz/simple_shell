@@ -10,11 +10,12 @@
  * Return: 0 on success.
  */
 
-int main(int __attribute__((unused)) ac, char *av[], char __attribute__((unused)) **env)
+int main(int __attribute__((unused)) ac, char *av[], char **env)
 {
 	char *string = NULL, *token;
 	pid_t child;
 	int status, count = 0;
+	(void)env;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
