@@ -14,11 +14,12 @@ int main(int __attribute__((unused)) ac, char *av[], char __attribute__((unused)
 {
 	char *string = NULL, *token;
 	pid_t child;
-	int exec_err, status;
+	int status, count = 0;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
 	{
+		count++;
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "$ ", 2);
 		string = read_line();
@@ -34,10 +35,9 @@ int main(int __attribute__((unused)) ac, char *av[], char __attribute__((unused)
 			perror("$");
 		else if (child == 0)
 		{
-			exec_err = execve(token, av, NULL);
-			if (exec_err < 0)
+			if (execve(token, av, NULL) < 0)
 				free(string);
-			perror("$");
+			perror(av[0]);
 		}
 		else if (child > 0)
 		{

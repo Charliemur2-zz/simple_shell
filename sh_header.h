@@ -16,5 +16,6 @@
 int _strcmp(char *strtocmp);
 void handle_sigint(int sig);
 char *read_line(void);
+int execute(char **pathname);
 
 #endif /* _SH_HEADER_H_ */
