@@ -45,7 +45,7 @@ This repository contains all the files to run a ver basic UNIX command interpret
 | **File** | **Description** |
 |----------|-----------------|
 | sh_header.h | Header file containing all the functions prototypes and standard C libraries included |
-| file1.c | description |
+| sh_main.c | Core of the shell |
 | file2.c | description |
 | file3.c | description |
 

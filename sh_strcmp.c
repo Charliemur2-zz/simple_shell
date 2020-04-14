@@ -9,7 +9,7 @@
 
 int _strcmp(char *strtocmp)
 {
-	int i = 0, temp = 0;
+	int i = 0, temp = 0, status;
 	char *esc = "exit";
 
 	while (strtocmp[i] && esc[i])
@@ -20,8 +20,9 @@ int _strcmp(char *strtocmp)
 	}
 	if (temp == 0)
 	{
+		status = _atoi(strtocmp + (i + 1));
 		free(strtocmp);
-		exit(0);
+		exit(status);
 	}
 	return (0);
 }

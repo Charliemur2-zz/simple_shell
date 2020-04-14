@@ -10,16 +10,15 @@
 char *read_line(void)
 {
 	int bytes_read;
-	char *buf = NULL;
+	char *buffer = NULL;
 	size_t size = 1024;
 
-	bytes_read = getline(&buf, &size, stdin);
+	bytes_read = getline(&buffer, &size, stdin);
 	if (bytes_read < 0)
 	{
-		if (isatty(STDIN_FILENO))
-			write(STDOUT_FILENO, "\n", 1);
-		free(buf);
-		exit(0);
-	}
-	return (buf);
+		write(STDOUT_FILENO, "\n", 1);
+		free(buffer);
+		exit(1);
+		}
+	return (buffer);
 }
