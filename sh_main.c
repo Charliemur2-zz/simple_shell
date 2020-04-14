@@ -1,5 +1,18 @@
 #include "sh_header.h"
-#include <errno.h>
+
+/**
+ * freezer - Function that frees the memory allocated by the program.
+ * @token: Array of pointers that stores the tokens.
+ * @string: Pointer that stores the input from the keyboard.
+ *
+ * Return: Nothing.
+ */
+
+void freezer(char **token, char *string)
+{
+	free(string);
+	free(token);
+}
 
 /**
  * main - Entry point / run the shell!
@@ -12,15 +25,12 @@
 
 int main(int __attribute__((unused)) ac, char *av[], char **env)
 {
-	char *string = NULL, *token;
+	char *string = NULL, **token;
 	pid_t child;
-	int status, count = 0;
-	(void)env;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
 	{
-		count++;
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "$ ", 2);
 		string = read_line();
@@ -29,22 +39,25 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 			free(string);
 			continue;
 		}
-		token = strtok(string, " \n\t");
 		_strcmp(string);
+		token = toktok(string);
 		child = fork();
 		if (child < 0)
-			perror("$");
+		{
+			perror("fork");
+			exit(1);
+		}
 		else if (child == 0)
 		{
-			if (execve(token, av, NULL) < 0)
-				free(string);
-			perror(av[0]);
+			if (execve(token[0], token, env) < 0)
+			{
+				freezer(token, string);
+				perror(av[0]);
+				exit(127);
+			}
 		}
-		else if (child > 0)
-		{
-			wait(&status);
-			free(string);
-		}
+		wait(NULL);
+		freezer(token, string);
 	}
 	return (0);
 }
