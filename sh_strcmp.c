@@ -1,16 +1,17 @@
 #include "sh_header.h"
 
 /**
- * _strcmp - function that compares two strings and exit if they are equal.
- * @strtocmp: String to compare
+ * built_in - function that compares two strings and execute the built-in.
+ * @strtocmp: String to compare.
+ * @env_link: link to environ.
  *
  * Return: Always 0.
  */
 
-int _strcmp(char *strtocmp)
+int built_in(char *strtocmp, char **env_link)
 {
 	int i = 0, temp = 0, status;
-	char *esc = "exit";
+	char *esc = "exit", *e_var = "env";
 
 	while (strtocmp[i] && esc[i])
 	{
@@ -23,6 +24,23 @@ int _strcmp(char *strtocmp)
 		status = _atoi(strtocmp + (i + 1));
 		free(strtocmp);
 		exit(status);
+	}
+	else
+	{
+		i = 0;
+		temp = 0;
+		while (strtocmp[i] && e_var[i])
+		{
+			if (strtocmp[i] != e_var[i])
+				temp = strtocmp[i] - e_var[i];
+			i++;
+		}
+		if (temp == 0)
+		{
+			_printenv(env_link);
+			free(strtocmp);
+			return (1);
+		}
 	}
 	return (0);
 }

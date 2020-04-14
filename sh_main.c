@@ -27,6 +27,7 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 {
 	char *string = NULL, **token;
 	pid_t child;
+	int flagsc = 0;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
@@ -39,7 +40,9 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 			free(string);
 			continue;
 		}
-		_strcmp(string);
+		flagsc = built_in(string, env);
+		if (flagsc == 1)
+			continue;
 		token = toktok(string);
 		child = fork();
 		if (child < 0)
