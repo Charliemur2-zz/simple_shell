@@ -1,4 +1,4 @@
-#include "sh_header.h"
+#include "header.h"
 
 /**
  * read_line - Function that reads the standard input and stores the info

@@ -1,4 +1,4 @@
-#include "sh_header.h"
+#include "header.h"
 
 /**
  * handle_sigint - Signal Handler - Interrupt the process / ctrl + C.
