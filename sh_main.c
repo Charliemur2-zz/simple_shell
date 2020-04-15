@@ -1,20 +1,6 @@
 #include "sh_header.h"
 
 /**
- * freezer - Function that frees the memory allocated by the program.
- * @token: Array of pointers that stores the tokens.
- * @string: Pointer that stores the input from the keyboard.
- *
- * Return: Nothing.
- */
-
-void freezer(char **token, char *string)
-{
-	free(string);
-	free(token);
-}
-
-/**
  * main - Entry point / run the shell!
  * @ac: - Number of arguments passed to the program.
  * @av: - One-dimensional array of strings - "arguments".
@@ -63,4 +49,18 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 		freezer(token, string);
 	}
 	return (0);
+}
+
+/**
+ * freezer - Function that frees the memory allocated by the program.
+ * @token: Array of pointers that stores the tokens.
+ * @string: Pointer that stores the input from the keyboard.
+ *
+ * Return: Nothing.
+ */
+
+void freezer(char **token, char *string)
+{
+	free(string);
+	free(token);
 }
