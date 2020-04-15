@@ -17,7 +17,7 @@ char *read_line(void)
 	if (bytes_read < 0)
 	{
 		free(buffer);
-		exit(1);
+		exit(0);
 	}
 	return (buffer);
 }
