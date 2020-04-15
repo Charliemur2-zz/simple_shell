@@ -9,11 +9,12 @@
  * Return: 0 on success.
  */
 
-int main(int __attribute__((unused)) ac, char *av[], char **env)
+int main(int ac, char *av[], char **env)
 {
 	char *string = NULL, **token;
 	pid_t child;
 	int flagsc = 0;
+	(void)ac;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
