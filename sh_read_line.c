@@ -16,9 +16,8 @@ char *read_line(void)
 	bytes_read = getline(&buffer, &size, stdin);
 	if (bytes_read < 0)
 	{
-		write(STDOUT_FILENO, "\n", 1);
 		free(buffer);
 		exit(1);
-		}
+	}
 	return (buffer);
 }
