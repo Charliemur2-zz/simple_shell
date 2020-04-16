@@ -25,5 +25,8 @@ char **toktok(char *buffer);
 int _atoi(char *s);
 void freezer(char **token, char *string);
 void _printenv(char **env);
+char **path_finder(char **token_path, char **env_path, char *stringet);
+char *_strcat(char *dest, char *src);
+int childhood(char **token, char *av[], char **env, char *string);
 
 #endif /* _HEADER_H_ */

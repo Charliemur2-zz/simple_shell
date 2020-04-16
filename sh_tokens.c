@@ -20,7 +20,7 @@ char **toktok(char *buffer)
 		perror("$");
 		exit(1);
 	}
-	token = strtok(buffer, " \n\t");
+	token = strtok(buffer, " \n\t\r\a");
 	if (token == NULL)
 	{
 		perror("$");
@@ -31,7 +31,7 @@ char **toktok(char *buffer)
 	{
 		subtoken[i] = token;
 		i++;
-		token = strtok(NULL, " \n\t");
+		token = strtok(NULL, " \n\t\r\a");
 	}
 	subtoken[i] = '\0';
 	return (subtoken);
