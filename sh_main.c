@@ -9,10 +9,11 @@
  * Return: 0 on success.
  */
 
-int main(int __attribute__((unused)) ac, char *av[], char **env)
+int main(int ac, char *av[], char **env)
 {
 	char *string = NULL, **token;
 	int flagsc = 0;
+	(void)ac;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
@@ -36,6 +37,7 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 			continue;
 		}
 		childhood(token, av, env, string);
+		wait(NULL);
 	}
 	return (0);
 }
