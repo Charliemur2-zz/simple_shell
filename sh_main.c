@@ -12,7 +12,7 @@
 int main(int __attribute__((unused)) ac, char *av[], char **env)
 {
 	char *string = NULL, **token;
-	int flagsc = 0, status = 0;
+	int flagsc = 0;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
@@ -35,9 +35,9 @@ int main(int __attribute__((unused)) ac, char *av[], char **env)
 			freezer(token, string);
 			continue;
 		}
-		status = childhood(token, av, env, string);
+		childhood(token, av, env, string);
 	}
-	return (status);
+	return (0);
 }
 
 /**
