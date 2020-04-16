@@ -9,12 +9,10 @@
  * Return: 0 on success.
  */
 
-int main(int ac, char *av[], char **env)
+int main(int __attribute__((unused)) ac, char *av[], char **env)
 {
 	char *string = NULL, **token;
-	pid_t child;
-	int flagsc = 0;
-	(void)ac;
+	int flagsc = 0, status = 0;
 
 	signal(SIGINT, handle_sigint);
 	while (1)
@@ -30,26 +28,16 @@ int main(int ac, char *av[], char **env)
 		flagsc = built_in(string, env);
 		if (flagsc == 1)
 			continue;
+		token = NULL;
 		token = toktok(string);
-		child = fork();
-		if (child < 0)
+		if (token[0] == NULL)
 		{
-			perror("fork");
-			exit(1);
+			freezer(token, string);
+			continue;
 		}
-		else if (child == 0)
-		{
-			if (execve(token[0], token, env) < 0)
-			{
-				freezer(token, string);
-				perror(av[0]);
-				exit(127);
-			}
-		}
-		wait(NULL);
-		freezer(token, string);
+		status = childhood(token, av, env, string);
 	}
-	return (0);
+	return (status);
 }
 
 /**
@@ -59,7 +47,6 @@ int main(int ac, char *av[], char **env)
  *
  * Return: Nothing.
  */
-
 void freezer(char **token, char *string)
 {
 	free(string);
