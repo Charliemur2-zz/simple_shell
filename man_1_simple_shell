@@ -2,17 +2,18 @@
 .\" Contact Charliemur2 or luismvargasg on GitHub to correct errors or typos.
 .TH man 1 "10 April 2020" "1.0" "SIMPLE SHELL"
 .SH NAME
-simple_shell \- run a basic shell
+simple_shell \- run a basic shell. Command interpreter.
 .SH SYNOPSIS
-   .B #include <stdio.h>
-   .B #include <stdlib.h>
-   .B #include <sys/types.h>
-   .B #include <sys/wait.h>
-   .B #include <string.h>
+   #include <stdio.h>
+   #include <stdlib.h>
+   #include <sys/types.h>
+   #include <sys/wait.h>
+   #include <string.h>
 
-.B invocation: ./simple_shell
-    simple_shell$ [command] [argument1] [argument2...] [filename/path]
-    To exit type in the prompt: exit
+   int main(int ac, char *av[], char **env);
+
+   where ac is an unussed variable, av is the content of the argument and env is the evironment of the program.
+
 .SH DESCRIPTION
 simple_shell is the standard command interpreter for the system. It is a program that runs a basic shell. It run\
 s basic commands from the standar input and execute that in the standar output like the original shell. 
@@ -22,17 +23,111 @@ The command lines are simple, no semicolons, no pipes, no redirections or any ot
 It handles arguments with the commands.
 The simple_shell shows error messages when a typing error occurs.
 .SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
+Simple Shell manges to be executed. The interactive and non-interactive. The second one is for look the results outside the program.
+All the commands has its own flags and options and this version manage the path of the directory where we need to use the command.
+BUILT-INS
+exit and env.
 .SH EXIT STATUS
      Errors that are detected by the shell, such as a syntax error, will cause the shell to
      exit with a non-zero exit status.  If the shell is not an interactive shell, the execu-
      tion of the shell file will be aborted.  Otherwise the shell will return the exit status
      of the last command executed, or if the exit builtin is used with a numeric argument, it
      will return the argument.
+
+.SH ENVIRONMENT
+HOME       Set automatically by login(1) from the user's login directory in the password file
+                (passwd(4)).  This environment variable also functions as the default argument for the cd
+                builtin.
+
+     PATH       The default search path for executables.  See the above section Path Search.
+
+     MAIL
+
+     IFS        Input Field Separators.  This is normally set to <space>, <tab>, and <newline>.  See the
+                White Space Splitting section for more details.
+
+     TERM       The default terminal setting for the shell.  This is inherited by children of the shell,
+                and is used in the history editing modes.
+
+     HISTSIZE   The number of lines in the history buffer for the shell.
+
+     PWD        The logical value of the current working directory.  This is set by the cd command.
+
+     OLDPWD     The previous logical value of the current working directory.  This is set by the cd com-
+                mand.
+
+     PPID       The process ID of the parent process of the shell.
+.SH EXAMPLES
+
+Non-interactive mode:
+
+simple_shell:$ echo "/bin/ls" | ./hsh
+AUTHORS   hsh                 #README.md#  sh_atoi.c      sh_child.c   sh_handle_signint.c  sh_read_line.c
+header.h  man_1_simple_shell  README.md    sh_built_in.c  sh_getenv.c  sh_main.c            sh_tokens.c
+simple_shell:$ echo $?
+0
+simple_shell:$
+
+Interactive mode:
+
+simple_shell:$ ./hsh
+$ /bin/ls -1
+AUTHORS
+header.h
+hsh
+man_1_simple_shell
+README.md
+sh_atoi.c
+sh_built_in.c
+sh_child.c
+sh_getenv.c
+sh_handle_signint.c
+sh_main.c
+sh_read_line.c
+sh_tokens.c
+$
+
+Ctrl+C
+
+simple_shell:$ ./hsh
+$ ^C
+$ ^C
+$ ^C
+
+Exit + arguments
+
+simple_shell:$ ./hsh
+$ exit 98
+simple_shell:$ echo $?
+98
+simple_shell:$
+
+Crtl+D
+
+simple_shell:$ ./hsh
+$
+simple_shell:$ echo $?
+0
+simple_shell:$
+
+Environment list.
+
+simple_shell:$ ./hsh
+$ env
+XDG_SESSION_ID=3
+TERM=xterm-256color
+SHELL=/bin/bash
+SSH_CLIENT=10.0.2.2 50804 22
+SSH_TTY=/dev/pts/1
+USER=vagrant
+..continue...
+
 .SH SEE ALSO
 man (2) sh
+
 .SH BUGS
 No known bugs.
-.SH AUTHOR
+
+.SH AUTHORS
 Luis Miguel Vargas (luismvargasg on GitHub).
 Carlos Andres Murcia Muñoz (Charliemur2 on GitHub).
