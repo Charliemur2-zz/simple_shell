@@ -62,8 +62,6 @@ This repository contains all the files to run a ver basic UNIX command interpret
 
 ## Flow Chart
 
-***ACÁ VA EL FLOW CHART***
-
 ![Flow Chart](https://i.imgur.com/RQGZB9G.png)
 
 ## Usage Examples
