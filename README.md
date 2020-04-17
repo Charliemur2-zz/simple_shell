@@ -64,7 +64,7 @@ This repository contains all the files to run a ver basic UNIX command interpret
 
 ***ACÁ VA EL FLOW CHART***
 
-[![Flow Chart](https://imgur.com/RQGZB9G]
+[![Flow Chart](https://imgur.com/RQGZB9G)
 
 ## Usage Examples
 
