@@ -95,7 +95,8 @@ sh_handle_signint.c
 sh_main.c
 sh_read_line.c
 sh_tokens.c
-$```
+$
+```
 
 Ctrl+C
 ------
