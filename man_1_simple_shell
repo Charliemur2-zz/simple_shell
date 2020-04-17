@@ -15,18 +15,18 @@ simple_shell \- run a basic shell. Command interpreter.
    where ac is an unussed variable, av is the content of the argument and env is the evironment of the program.
 
 .SH DESCRIPTION
-simple_shell is the standard command interpreter for the system. It is a program that runs a basic shell. It run\
-s basic commands from the standar input and execute that in the standar output like the original shell. 
-Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-The prompt is displayed again each time a command has been executed.
-The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
-It handles arguments with the commands.
-The simple_shell shows error messages when a typing error occurs.
+    simple_shell is the standard command interpreter for the system. It is a program that runs a basic shell. It run\
+    s basic commands from the standar input and execute that in the standar output like the original shell. 
+    Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+    The prompt is displayed again each time a command has been executed.
+    The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+    It handles arguments with the commands.
+    The simple_shell shows error messages when a typing error occurs.
 .SH OPTIONS
-Simple Shell manges to be executed. The interactive and non-interactive. The second one is for look the results outside the program.
-All the commands has its own flags and options and this version manage the path of the directory where we need to use the command.
+    Simple Shell manges to be executed. The interactive and non-interactive. The second one is for look the results outside t    he program.
+    All the commands has its own flags and options and this version manage the path of the directory where we need to use the 	 command.
 BUILT-INS
-exit and env.
+	exit and env.
 .SH EXIT STATUS
      Errors that are detected by the shell, such as a syntax error, will cause the shell to
      exit with a non-zero exit status.  If the shell is not an interactive shell, the execu-
