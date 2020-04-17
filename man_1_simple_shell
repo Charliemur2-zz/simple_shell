@@ -35,28 +35,61 @@ exit and env.
      will return the argument.
 
 .SH ENVIRONMENT
-HOME       Set automatically by login(1) from the user's login directory in the password file
+
+    LESSOPEN	this variable is to tell the less program how to guess and read different types of files. In principle, less                 read just ASCII files, so a command like less package.tar will produce an error. The "old" way to do is was t                o untar the file package.tar and pipe the result to less, so we just see the list of files in the package.tar                archive.
+
+    MAIL	The name of a mail file, that will be checked for the arrival of new mail.  Overridden by
+                MAILPATH.
+
+    SSH_CLIENT	The SSH client's IP address, followed by space, followed by port number. The SSH Server does set this for com                mands executed in service context.
+
+    USER	the SSH Server sets this to the account name portion (without domain) of the user's full account name. The SS		     H Server does not set this for commands executed in service context.
+
+    SHLVL	holds the number of shell levels the current shell is running on top of. In a new terminal window, executing 		     the following command will produce different results based on the Linux distribution in use.
+
+    LD_LIBRARY_PATH   is a colon-separated (:) set of directories where libraries are searched for first before the standard 		     	 	   set of directories.
+
+    HOME       Set automatically by login(1) from the user's login directory in the password file
                 (passwd(4)).  This environment variable also functions as the default argument for the cd
                 builtin.
-
-     PATH       The default search path for executables.  See the above section Path Search.
-
-     MAIL
-
-     IFS        Input Field Separators.  This is normally set to <space>, <tab>, and <newline>.  See the
-                White Space Splitting section for more details.
-
-     TERM       The default terminal setting for the shell.  This is inherited by children of the shell,
-                and is used in the history editing modes.
-
-     HISTSIZE   The number of lines in the history buffer for the shell.
-
-     PWD        The logical value of the current working directory.  This is set by the cd command.
-
-     OLDPWD     The previous logical value of the current working directory.  This is set by the cd com-
+    OLDPWD     The previous logical value of the current working directory.  This is set by the cd com-
                 mand.
 
-     PPID       The process ID of the parent process of the shell.
+    SSH_TTY	specifies the device node of the current virtual terminal (e.g. /dev/pts/25 ). The SSH_CONNECTION is set to i                p and port on client and on host machine (4 fields separated by whitespace)
+
+    LC_CTYPE
+
+    LOGNAME
+
+    _
+
+    XDG_SESSION_ID
+
+    TERM       The default terminal setting for the shell.  This is inherited by children of the shell,
+                and is used in the history editing modes.
+
+    PATH       The default search path for executables.  See the above section Path Search.
+
+    XDG_RUNTIME_DIR
+
+    GLIBCPP_FORCE_NEW
+
+    LANG
+
+    LS_COLORS
+
+    SHELL
+
+    LESSCLOSE
+
+    PWD        The logical value of the current working directory.  This is set by the cd command.
+
+    SSH_CONNECTION
+
+    GLIBCXX_FORCE_NEW
+
+    LD_PRELOAD
+
 .SH EXAMPLES
 
 Non-interactive mode:
